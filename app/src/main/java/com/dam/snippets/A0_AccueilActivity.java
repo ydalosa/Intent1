@@ -8,30 +8,64 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.dam.snippets.a1_layout_xml.A11_LinearLayoutXml;
+import com.dam.snippets.a1_layout_xml.A12_FrameLayoutXml;
+import com.dam.snippets.a1_layout_xml.A13_RelativeLayoutXml;
 
 public class A0_AccueilActivity extends AppCompatActivity {
 
-    /** VARIABLES GLOBALES **/
-    TextView tvLinearLayout;
+    /** Var globales **/
+    TextView tvLinearLayout, tvFrameLayout, tvRelativeLayout;
 
-    /** Méthode pour lier design au code **/
-    public void initUI(){
+    /******* Méthodes  Perso *******/
+    /** Méthode pour l'initialisation des composants **/
+    private void initUI(){
         tvLinearLayout = findViewById(R.id.tvLinearLayout);
+        tvFrameLayout = findViewById(R.id.tvFrameLayout);
+        tvRelativeLayout = findViewById(R.id.tvRelativeLayout);
     }
 
+    private void clicLinear(){
+        tvLinearLayout.setOnClickListener(new View.OnClickListener() { // Gestion du clic avec le listener
+            @Override
+            public void onClick(View view) {
+                // Action effectuée lors du clic ici un intent pour se rendre sur l'activité des linear layout
+                // Départ                   // Arrivée
+                Intent intent = new Intent(A0_AccueilActivity.this, A11_LinearLayoutXml.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void clicFrame(){
+        tvFrameLayout.setOnClickListener(new View.OnClickListener() { // Gestion du clic avec le listener
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(A0_AccueilActivity.this, A12_FrameLayoutXml.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void clicRelative(){
+        tvRelativeLayout.setOnClickListener(new View.OnClickListener() { // Gestion du clic avec le listener
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(A0_AccueilActivity.this, A13_RelativeLayoutXml.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    /******* Cycles de vie de l'app *******/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a0_accueil);
         initUI();
 
-        tvLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                                                    // Départ                   // Arrivée
-                Intent intent = new Intent(A0_AccueilActivity.this, A11_LinearLayoutXml.class);
-                startActivity(intent);
-            }
-        });
+        // Clic sur les boutons
+        clicLinear();
+        clicFrame();
+        clicRelative();
     }
 }

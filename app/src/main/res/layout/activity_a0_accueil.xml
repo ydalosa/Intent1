@@ -23,4 +23,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml" />
 
+    <TextView
+        android:id="@+id/tvFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Frame Layout"
+        app:layout_constraintStart_toEndOf="@+id/tvLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml" />
+
+    <TextView
+        android:id="@+id/tvRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Relative Layout"
+        app:layout_constraintStart_toEndOf="@+id/tvFrameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
