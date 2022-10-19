@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".A0_AccueilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <!-- LAYOUT -->
     <TextView
@@ -13,20 +18,38 @@
         android:layout_height="wrap_content"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml_titre"
         android:text="Layout XML"
+        android:theme="@style/CategoryLayoutXml"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- LIGNE 1 Layout -->
+
+    <!-- END Ligne 1 Layout-->
+
+    <!-- LIGNE 2 Layout -->
+
     <TextView
         android:id="@+id/tvLinearLayout"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
         android:text="Linear Layout"
+        android:theme="@style/ItemLayoutXml"
+        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml"
-        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml" />
+
+    <TextView
+        android:id="@+id/tvTableLayout"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+        android:text="TableLayout"
+        android:theme="@style/ItemLayoutXml"
+        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLinearLayout" />
 
     <TextView
         android:id="@+id/tvFrameLayout"
@@ -34,6 +57,7 @@
         android:layout_height="100dp"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
         android:text="Frame Layout"
+        android:theme="@style/ItemLayoutXml"
         app:layout_constraintBottom_toBottomOf="@+id/tvLinearLayout"
         app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
         app:layout_constraintStart_toEndOf="@+id/tvLinearLayout"
@@ -46,22 +70,11 @@
         android:layout_height="100dp"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
         android:text="Relative Layout"
+        android:theme="@style/ItemLayoutXml"
         app:layout_constraintBottom_toBottomOf="@+id/tvFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvFrameLayout"
         app:layout_constraintTop_toTopOf="@+id/tvFrameLayout" />
-    <!-- END Ligne 1 Layout-->
-
-    <!-- LIGNE 2 Layout -->
-    <TextView
-        android:id="@+id/tvTableLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="TableLayout"
-        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLinearLayout" />
 
     <TextView
         android:id="@+id/tvConstraintLayout"
@@ -69,6 +82,7 @@
         android:layout_height="100dp"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
         android:text="Constarint layout"
+        android:theme="@style/ItemLayoutXml"
         app:layout_constraintBottom_toBottomOf="@+id/tvTableLayout"
         app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
         app:layout_constraintStart_toEndOf="@+id/tvTableLayout"
@@ -80,6 +94,7 @@
         android:layout_height="100dp"
         android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
         android:text="Grid Layout"
+        android:theme="@style/ItemLayoutXml"
         app:layout_constraintBottom_toBottomOf="@+id/tvConstraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvConstraintLayout"
@@ -127,4 +142,6 @@
         app:layout_constraintTop_toTopOf="@+id/tvAnimationSimpson"
         app:layout_constraintStart_toEndOf="@id/tvAnimationSimpson"/>
 -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
