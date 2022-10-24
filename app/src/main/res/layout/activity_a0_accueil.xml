@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,137 +10,290 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <!-- LAYOUT -->
-    <TextView
-        android:id="@+id/tvTitreLayoutXml"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml_titre"
-        android:text="Layout XML"
-        android:theme="@style/CategoryLayoutXml"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- LAYOUT -->
 
-    <!-- LIGNE 1 Layout -->
+        <!-- LIGNE 1 Layout -->
+        <TextView
+            android:id="@+id/tv___LayoutXml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml_titre"
+            android:text="Layout XML"
+            android:theme="@style/TitreAccueil"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- END Ligne 1 Layout-->
+        <TextView
+            android:id="@+id/tvLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Linear Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv___LayoutXml" />
 
-    <!-- LIGNE 2 Layout -->
+        <TextView
+            android:id="@+id/tvFrameLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Frame Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLinearLayout"
+            app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
+            app:layout_constraintStart_toEndOf="@+id/tvLinearLayout"
+            app:layout_constraintTop_toTopOf="@+id/tvLinearLayout"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/tvLinearLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="Linear Layout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitreLayoutXml" />
+        <TextView
+            android:id="@+id/tvRelativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Relative Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFrameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFrameLayout"
+            app:layout_constraintTop_toTopOf="@+id/tvFrameLayout" />
+        <!-- END Ligne 1 Layout XML-->
 
-    <TextView
-        android:id="@+id/tvTableLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="TableLayout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLinearLayout" />
+        <!-- LIGNE 2 Layout XML -->
+        <TextView
+            android:id="@+id/tvTableLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Table Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@id/tvFrameLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLinearLayout" />
 
-    <TextView
-        android:id="@+id/tvFrameLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="Frame Layout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintBottom_toBottomOf="@+id/tvLinearLayout"
-        app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
-        app:layout_constraintStart_toEndOf="@+id/tvLinearLayout"
-        app:layout_constraintTop_toTopOf="@+id/tvLinearLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/tvConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Constraint layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTableLayout"
+            app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
+            app:layout_constraintStart_toEndOf="@+id/tvTableLayout"
+            app:layout_constraintTop_toTopOf="@+id/tvTableLayout" />
 
-    <TextView
-        android:id="@+id/tvRelativeLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="Relative Layout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintBottom_toBottomOf="@+id/tvFrameLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvFrameLayout"
-        app:layout_constraintTop_toTopOf="@+id/tvFrameLayout" />
+        <TextView
+            android:id="@+id/tvGridLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
+            android:text="Grid Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvConstraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvConstraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/tvConstraintLayout" />
+        <!-- END Ligne 2 Layout XML-->
 
-    <TextView
-        android:id="@+id/tvConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="Constarint layout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTableLayout"
-        app:layout_constraintEnd_toStartOf="@id/tvRelativeLayout"
-        app:layout_constraintStart_toEndOf="@+id/tvTableLayout"
-        app:layout_constraintTop_toTopOf="@+id/tvTableLayout" />
+        <!-- START Layout From Java -->
+        <TextView
+            android:id="@+id/tv___LayoutJava"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a0_shape_accueil_a2_layout_java_titre"
+            android:text="Layout Java"
+            android:theme="@style/TitreAccueil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTableLayout" />
 
-    <TextView
-        android:id="@+id/tvGridLayout"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a1_linear_layout_xml"
-        android:text="Grid Layout"
-        android:theme="@style/ItemLayoutXml"
-        app:layout_constraintBottom_toBottomOf="@+id/tvConstraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvConstraintLayout"
-        app:layout_constraintTop_toTopOf="@+id/tvConstraintLayout" />
-    <!-- END Ligne 2 Layout-->
-    <!--
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/a0_shape_accueil_a3_animation_titre"
-        android:text="Animations"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFrameLayout" />
+        <TextView
+            android:id="@+id/tvLinearLayoutJava"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a2_layout_java"
+            android:text="Linear layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@+id/tvRelativeLayoutJava"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv___LayoutJava" />
 
-    <TextView
-        android:id="@+id/tvAnimationSplash"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/a0_shape_accueil_a3_animation"
-        android:text="Splash"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvAnimationSimpson"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        <TextView
+            android:id="@+id/tvRelativeLayoutJava"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a2_layout_java"
+            android:text="Realtive Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLinearLayoutJava"
+            app:layout_constraintEnd_toStartOf="@+id/tvGridLayoutJava1"
+            app:layout_constraintStart_toEndOf="@id/tvLinearLayoutJava"
+            app:layout_constraintTop_toTopOf="@+id/tvLinearLayoutJava" />
 
-    <TextView
-        android:id="@+id/tvAnimationSimpson"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:text="TextView"
-        app:layout_constraintTop_toTopOf="@+id/tvAnimationSplash"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAnimationSplash"
-        app:layout_constraintEnd_toStartOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@id/tvAnimationSplash"
-         />
+        <TextView
+            android:id="@+id/tvGridLayoutJava1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a2_layout_java"
+            android:text="Grid Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRelativeLayoutJava"
+            app:layout_constraintEnd_toStartOf="@id/tvGridLayoutJava2"
+            app:layout_constraintStart_toEndOf="@id/tvRelativeLayoutJava"
+            app:layout_constraintTop_toTopOf="@+id/tvRelativeLayoutJava" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAnimationSimpson"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvAnimationSimpson"
-        app:layout_constraintStart_toEndOf="@id/tvAnimationSimpson"/>
--->
+        <TextView
+            android:id="@+id/tvGridLayoutJava2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a2_layout_java"
+            android:text="Grid Layout"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGridLayoutJava1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvGridLayoutJava1"
+            app:layout_constraintTop_toTopOf="@+id/tvGridLayoutJava1" />
+        <!-- END Layout from Java -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+        <!-- START Animations -->
+        <TextView
+            android:id="@+id/tv___Animations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a0_shape_accueil_a3_animation_titre"
+            android:text="Animations"
+            android:theme="@style/TitreAccueil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGridLayoutJava2" />
+
+        <TextView
+            android:id="@+id/tvAnimationSplash"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a3_animation"
+            android:text="Splash"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@+id/tvAnimationSimpson"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv___Animations" />
+
+        <TextView
+            android:id="@+id/tvAnimationSimpson"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a3_animation"
+            android:text="Simpson"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAnimationSplash"
+            app:layout_constraintEnd_toStartOf="@+id/tvAnimationConstraintSet"
+            app:layout_constraintStart_toEndOf="@id/tvAnimationSplash"
+            app:layout_constraintTop_toTopOf="@+id/tvAnimationSplash" />
+
+        <TextView
+            android:id="@+id/tvAnimationConstraintSet"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a3_animation"
+            android:text="Constraint set"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAnimationSimpson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAnimationSimpson"
+            app:layout_constraintTop_toTopOf="@+id/tvAnimationSimpson" />
+        <!-- END Animation -->
+
+        <!-- START Medias -->
+        <TextView
+            android:id="@+id/tv___Medias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a0_shape_accueil_a4_medias_titre"
+            android:text="Médias"
+            android:theme="@style/TitreAccueil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAnimationSplash" />
+
+        <TextView
+            android:id="@+id/tvMediaAudio"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a4_medias"
+            android:text="Audio"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@id/tvMediaVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv___Medias" />
+
+        <!-- END Medias -->
+
+        <!-- Start Lists -->
+
+        <TextView
+            android:id="@+id/tvMediaVideo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a4_medias"
+            android:text="Video"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMediaAudio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMediaAudio"
+            app:layout_constraintTop_toTopOf="@+id/tvMediaAudio"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv___Liste"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a0_shape_accueil_a5_liste_titre"
+            android:text="Listes"
+            android:theme="@style/TitreAccueil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMediaAudio" />
+
+        <TextView
+            android:id="@+id/tvListeListView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a5_liste"
+            android:text="List View"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintEnd_toStartOf="@+id/tvListeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv___Liste" />
+
+        <TextView
+            android:id="@+id/tvListeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a5_liste"
+            android:text="Spinner"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvListeListView"
+            app:layout_constraintEnd_toStartOf="@+id/tvListeRecyclerView"
+            app:layout_constraintStart_toEndOf="@id/tvListeListView"
+            app:layout_constraintTop_toTopOf="@+id/tvListeListView" />
+
+        <TextView
+            android:id="@+id/tvListeRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/a0_shape_accueil_a5_liste"
+            android:text="Recycler View"
+            android:theme="@style/TextAccueil"
+            app:layout_constraintBottom_toBottomOf="@+id/tvListeSpinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvListeSpinner"
+            app:layout_constraintTop_toTopOf="@+id/tvListeSpinner" />
+        <!-- END Listes -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
