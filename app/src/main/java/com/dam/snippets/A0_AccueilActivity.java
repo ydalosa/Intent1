@@ -16,6 +16,7 @@ import com.dam.snippets.a3_animation.A31_Splash_Animation;
 import com.dam.snippets.a3_animation.A32_Simpson_Animation;
 import com.dam.snippets.a4_media.A41_AudioAuto;
 import com.dam.snippets.a4_media.A42_Video;
+import com.dam.snippets.a5_list.A51_ListView;
 
 public class A0_AccueilActivity extends AppCompatActivity {
 
@@ -28,6 +29,9 @@ public class A0_AccueilActivity extends AppCompatActivity {
 
     // Les médias
     TextView tvMediaAudio, tvMediaVideo;
+
+    // Les listes
+    TextView tvListView;
 
     /******* Méthodes  Perso *******/
     /** Méthode pour l'initialisation des composants **/
@@ -46,6 +50,9 @@ public class A0_AccueilActivity extends AppCompatActivity {
         // Les médias
         tvMediaAudio = findViewById(R.id.tvMediaAudio);
         tvMediaVideo = findViewById(R.id.tvMediaVideo);
+
+        // Les listes
+        tvListView = findViewById(R.id.tvListeListView);
     }
 
     private void clicLinear(){
@@ -143,6 +150,16 @@ public class A0_AccueilActivity extends AppCompatActivity {
         });
     }
 
+    private void clicListView() {
+        tvListView.setOnClickListener(new View.OnClickListener() { // Gestion du clic avec le listener
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(A0_AccueilActivity.this, A51_ListView.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     /******* Cycles de vie de l'app *******/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,5 +182,8 @@ public class A0_AccueilActivity extends AppCompatActivity {
         // Les Médias
         clicAudio();
         clicVideo();
+
+        // Les listes
+        clicListView();
     }
 }

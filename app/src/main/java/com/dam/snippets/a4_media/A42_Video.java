@@ -48,10 +48,15 @@ public class A42_Video extends AppCompatActivity {
 
         vvVideo.start();
 
-        if(savedInstanceState != null){
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
             position = savedInstanceState.getInt("CurrentPosition");
             vvVideo.seekTo(position);
-        }
+        vvVideo.start();
     }
 
     @Override
