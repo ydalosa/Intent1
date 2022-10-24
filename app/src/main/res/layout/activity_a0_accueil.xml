@@ -220,6 +220,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAnimationSplash" />
 
+        <!-- END Medias -->
+
+        <!-- Start Lists -->
+
         <TextView
             android:id="@+id/tvMediaAudio"
             android:layout_width="0dp"
@@ -230,10 +234,6 @@
             app:layout_constraintEnd_toStartOf="@id/tvMediaVideo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv___Medias" />
-
-        <!-- END Medias -->
-
-        <!-- Start Lists -->
 
         <TextView
             android:id="@+id/tvMediaVideo"

@@ -12,7 +12,8 @@ import com.dam.snippets.R;
 
 public class A41_AudioAuto extends AppCompatActivity {
 
-    // 2.1 Media play de type global pour étre utilisé dans plusieurs méthodes
+    // 2.0 - Media player avec contrôle
+    // 2.1 Mediaplayer de type global pour étre utilisé dans plusieurs méthodes
     MediaPlayer mediaPlayer;
 
     // 2.3 La méthode Play
@@ -29,11 +30,13 @@ public class A41_AudioAuto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a41_audio_auto);
 
-        // 1- Lancement auto de la musique / son au lancement de l'activité
+//        // 1- Lancement auto de la musique / son au lancement de l'activité
+//        // Création de l'objet MediaPlayer            le contexte, le chemin vers le fichier (URI)
 //        MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.mp_audio_uptown_funk);
+//        // Lancement du player
 //        mediaPlayer.start();
 
-        // 2.0 - Media player avec contrôle
+
         // 2.2 Valorisation du médiaController
         mediaPlayer = MediaPlayer.create(this, R.raw.mp_audio_uptown_funk);
 
@@ -55,9 +58,13 @@ public class A41_AudioAuto extends AppCompatActivity {
                  audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
              }
              @Override
-             public void onStartTrackingTouch(SeekBar seekBar) {            }
+             public void onStartTrackingTouch(SeekBar seekBar) {
+                 // S'utilise lorsque l'utilisateur touche la seekbar
+                 }
              @Override
-             public void onStopTrackingTouch(SeekBar seekBar) {             }
+             public void onStopTrackingTouch(SeekBar seekBar) {
+                 // S'utilise lorsque l'utilisateur relache la seekbar
+             }
          });
 
 
