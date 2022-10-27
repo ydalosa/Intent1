@@ -209,6 +209,11 @@
         <!-- END Animation -->
 
         <!-- START Medias -->
+
+        <!-- END Medias -->
+
+        <!-- Start Lists -->
+
         <TextView
             android:id="@+id/tv___Medias"
             android:layout_width="0dp"
@@ -217,12 +222,9 @@
             android:text="Médias"
             android:theme="@style/TitreAccueil"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAnimationSplash" />
-
-        <!-- END Medias -->
-
-        <!-- Start Lists -->
 
         <TextView
             android:id="@+id/tvMediaAudio"

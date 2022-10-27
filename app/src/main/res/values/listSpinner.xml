@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listetest">
+        <item></item>
+        <item>Spinner XML</item>
+        <item>Spinner XML &amp; Java</item>
+        <item>Spinner only Java</item>
+    </string-array>
+</resources>

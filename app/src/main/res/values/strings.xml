@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Snippets</string>
+    <string name="btn_Valider">Valider</string>
+    <string name="langue_bouton">Français</string>
 </resources>
