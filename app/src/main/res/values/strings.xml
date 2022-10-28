@@ -2,4 +2,38 @@
     <string name="app_name">Snippets</string>
     <string name="btn_Valider">Valider</string>
     <string name="langue_bouton">Français</string>
+
+    <string-array name="stagiaires">
+        <item>Fred</item>
+        <item>Theo</item>
+        <item>Silvère</item>
+        <item>Jacques</item>
+        <item>Jasem</item>
+        <item>Mostafa</item>
+        <item>Anthony</item>
+        <item>Serge</item>
+        <item>Andy</item>
+        <item>Patrick</item>
+        <item>Philippe</item>
+        <item>Yann</item>
+        <item>Sam</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc turpis. Praesent porttitor nulla dolor</item>
+    </string-array>
+
 </resources>

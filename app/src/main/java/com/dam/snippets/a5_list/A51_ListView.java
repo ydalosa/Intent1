@@ -17,7 +17,7 @@ public class A51_ListView extends AppCompatActivity {
     /**
      * Méthode 1 avec un tableau dans le Java
      **/
-    private String[] listeStagiaires = new String[]{
+    private final String[] listeStagiaires = new String[]{
             "Théodore", "Fred", "Silvère", "Jacques", "Jasem", "Mostafa", "Serge", "Patrick", "Andy", "Taha"
     };
 
