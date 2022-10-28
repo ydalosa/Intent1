@@ -35,12 +35,14 @@ public class A53_Adapter_Recycler extends RecyclerView.Adapter<A53_Adapter_Recyc
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-
+        holder.ivImage.setImageResource(avatars[position]);
+        holder.tvTitre.setText(stagiaires[position]);
+        holder.tvDesc.setText(descs[position]);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return avatars.length;
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {

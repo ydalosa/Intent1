@@ -18,6 +18,7 @@ import com.dam.snippets.a4_media.A41_AudioAuto;
 import com.dam.snippets.a4_media.A42_Video;
 import com.dam.snippets.a5_list.A51_ListView;
 import com.dam.snippets.a5_list.A52_Spinner;
+import com.dam.snippets.a5_list.A53_RecyclerView;
 
 public class A0_AccueilActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class A0_AccueilActivity extends AppCompatActivity {
     TextView tvMediaAudio, tvMediaVideo;
 
     // Les listes
-    TextView tvListView, tvListeSpinner;
+    TextView tvListView, tvListeSpinner, tvListeRecycler;
 
     /******* Méthodes  Perso *******/
     /** Méthode pour l'initialisation des composants **/
@@ -55,6 +56,7 @@ public class A0_AccueilActivity extends AppCompatActivity {
         // Les listes
         tvListView = findViewById(R.id.tvListeListView);
         tvListeSpinner = findViewById(R.id.tvListeSpinner);
+        tvListeRecycler = findViewById(R.id.tvListeRecyclerView);
     }
 
     private void clicLinear(){
@@ -172,6 +174,16 @@ public class A0_AccueilActivity extends AppCompatActivity {
         });
     }
 
+    private void clicRecycler() {
+        tvListeRecycler.setOnClickListener(new View.OnClickListener() { // Gestion du clic avec le listener
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(A0_AccueilActivity.this, A53_RecyclerView.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     /******* Cycles de vie de l'app *******/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,5 +210,6 @@ public class A0_AccueilActivity extends AppCompatActivity {
         // Les listes
         clicListView();
         clicSpinner();
+        clicRecycler();
     }
 }
