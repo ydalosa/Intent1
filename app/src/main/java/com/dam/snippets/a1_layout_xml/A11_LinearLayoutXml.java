@@ -1,39 +1,27 @@
-package com.dam.snippets.a1_layout_xml;
+package com.example.intentdata1;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-import com.dam.snippets.R;
-
-public class A11_LinearLayoutXml extends AppCompatActivity {
-
+public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a11_linear_layout_xml);
+        setContentView(R.layout.activity_main2);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Main Activity2");
 
-        // Méthode 1 avec un listener sur le bouton
-        Button btnLinearVertical;
-        btnLinearVertical = findViewById(R.id.btnLinearVertical);
-        btnLinearVertical.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // LE code pour l'action
-                Intent intent = new Intent(A11_LinearLayoutXml.this, A11_1_LinearLayoutVerticalXml.class);
-                startActivity(intent);
-            }
-        });
-        // END méthode 1
-    }
-    // Méthode 2 avec l'appel de la méthode onClick du XML
-    public void gestionDuClic(View view){
-        // Attaché le widget à cette méthode avec l'attribut onClick du xml
-        Intent intent = new Intent(A11_LinearLayoutXml.this, A11_1_LinearLayoutVerticalXml.class);
-        startActivity(intent);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("NAME");
+        String email = intent.getStringExtra("EMAIL");
+        String phone = intent.getStringExtra("PHONE");
+
+        TextView mResult = findViewById(R.id.resultTv);
+        mResult.setText("Name: "+name+"\nEmail: "+email+ "\nPhone: "+phone);
     }
 }
