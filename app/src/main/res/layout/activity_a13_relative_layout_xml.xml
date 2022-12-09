@@ -1,142 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".a1_layout_xml.A13_RelativeLayoutXml"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#B5AEAE"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+package com.example.loginregister1;
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-        <TextView
-            android:id="@+id/textView_M1"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/a13_shape_relative_rectangle_blanc"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M1" />
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-        <TextView
-            android:id="@+id/tv_LayoutsXml"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_alignBottom="@+id/textView_M1"
-            android:layout_marginBottom="-100dp"
-            android:background="@drawable/a13_shape_relative_rectangle_blanc"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M2" />
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-        <TextView
-            android:id="@+id/textView_M3"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_alignBottom="@+id/tv_LayoutsXml"
-            android:layout_marginBottom="-80dp"
-            android:background="@drawable/a13_shape_relativ_rectangle_bleu"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M3" />
+import java.util.HashMap;
+import java.util.Map;
 
-        <TextView
-            android:id="@+id/textView_M4"
-            android:layout_width="210dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="100dp"
-            android:layout_toEndOf="@+id/textView_M1"
-            android:layout_toRightOf="@+id/textView_M1"
-            android:background="@drawable/a13_shape_relative_rectangle_rouge"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M4" />
+public class MainActivity2 extends AppCompatActivity {
+    EditText fName, lName, email, passW;
+    Button btn;
+    FirebaseFirestore db;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        db = FirebaseFirestore.getInstance();
+        fName = findViewById(R.id.editTextTextPersonName);
+        lName = findViewById(R.id.editTextTextPersonName2);
+        email = findViewById(R.id.editTextTextEmailAddress);
+        passW = findViewById(R.id.editTextTextPassword);
+        btn = findViewById(R.id.button);
 
-        <TextView
-            android:id="@+id/textView_M5"
-            android:layout_width="170dp"
-            android:layout_height="80dp"
-            android:layout_alignBottom="@+id/textView_M4"
-            android:layout_marginBottom="-80dp"
-            android:layout_toEndOf="@+id/textView_M3"
-            android:layout_toRightOf="@+id/textView_M3"
-            android:background="@drawable/a13_shape_relative_rectangle_blanc"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M5" />
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String Firstname = fName.getText().toString();
+                String Lastname = lName.getText().toString();
+                String Email = email.getText().toString();
+                String Password = passW.getText().toString();
 
-        <TextView
-            android:id="@+id/textView_M6"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/textView_M4"
-            android:layout_marginBottom="-40dp"
-            android:layout_toEndOf="@+id/textView_M5"
-            android:layout_toRightOf="@+id/textView_M5"
-            android:background="@drawable/a13_shape_relative_rectangle_blanc"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M6" />
+                Map<String,Object> user = new HashMap<>();
+                user.put("First name", Firstname);
+                user.put("Last name", Lastname);
+                user.put("email", Email);
+                user.put("password", Password);
 
-        <TextView
-            android:id="@+id/textView_M7"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/textView_M6"
-            android:layout_marginBottom="-40dp"
-            android:layout_toEndOf="@+id/textView_M5"
-            android:layout_toRightOf="@+id/textView_M5"
-            android:background="@drawable/a13_shape_relative_rectangle_jaune"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="tvClic"
-            android:tag="M7" />
-
-        <TextView
-            android:id="@+id/textView_TitreTableau"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView_M3"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="-40dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Composition II en rouge, bleu et jaune"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView_TitreMondrian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Piet Mondrian"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textColor="@color/black" />
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+                db.collection("user")
+                        .add(user)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Toast.makeText(MainActivity2.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(MainActivity2.this, "Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
+    }
+}
